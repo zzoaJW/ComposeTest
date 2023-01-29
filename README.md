@@ -1,4 +1,4 @@
-# MVVM 패턴 공부 기록
+# Compose 공부 기록
   
 [개인 스터디]  
 Android Studio (Kotlin)  
