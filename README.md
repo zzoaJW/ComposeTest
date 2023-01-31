@@ -6,3 +6,4 @@ Android Studio (Kotlin)
 
 [블로그 정리글]  
 [[Android] Jetpack Compose 사용법](https://blog.naver.com/zoooa16/222998513056)
+[[Android] Jetpack Compose의 Recyclerview - LazyColumn](https://blog.naver.com/zoooa16/223001109947)
