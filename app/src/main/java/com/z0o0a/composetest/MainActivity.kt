@@ -42,23 +42,29 @@ fun MessageCard(msg: Message) {
             painter = painterResource(R.drawable.temp_img),
             contentDescription = "Contact profile picture",
             modifier = Modifier
-                .size(40.dp)
-                .clip(CircleShape)
-                .border(1.5.dp, MaterialTheme.colors.secondary, CircleShape)
+                .size(40.dp)  // 이미지 사이즈
+                .clip(CircleShape)  // 이미지 자르기
+                .border(1.5.dp, MaterialTheme.colors.secondary, CircleShape)  // 이미지 테두리
         )
 
-        // 이미지랑 오른쪽에 텍스트들 사이 여백
-        Spacer(modifier = Modifier.width(8.dp))
+        Spacer(modifier = Modifier.width(8.dp)) // 이미지랑 오른쪽에 텍스트들 사이 여백
 
         Column {
             Text(
                 text = msg.author,
-                color = MaterialTheme.colors.secondaryVariant
+                color = MaterialTheme.colors.secondaryVariant,  // 텍스트 이미지
+                style = MaterialTheme.typography.subtitle2  // 텍스트 스타일(텍스트 글꼴)
             )
 
             Spacer(modifier = Modifier.height(4.dp))  // 텍스트 사이 여백
 
-            Text(text = msg.body)
+            Surface(shape = MaterialTheme.shapes.medium, elevation = 1.dp) {
+                Text(
+                    text = msg.body,
+                    modifier = Modifier.padding(all = 4.dp),
+                    style = MaterialTheme.typography.body2
+                )
+            }
         }
     }
 }
